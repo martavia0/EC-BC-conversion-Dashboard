@@ -14,7 +14,7 @@ def ecbc_conversion(orig, datetime, ec_bc, prot, instrEC, instrBC, scec1, scec10
     orig = np.asarray(orig, dtype=float)
     datetime = np.asarray(datetime)
     #The file is from the 10th of Dec
-    with h5py.File(r"C:\Users\marta\Documents\SMASH\SMASH_EC\Results\STAN_modelling\Linear\ECBC_MLR_0114.h5", 'r') as f:
+    with h5py.File(r"ECBC_MLR_0114.h5", 'r') as f:
         # print(list(f.keys()))       
         slope = np.array(f['slope'])
         protocol = np.array(f['protocol'])
