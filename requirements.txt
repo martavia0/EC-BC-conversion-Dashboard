@@ -4,3 +4,4 @@ numpy==1.24.3
 plotly==5.14.1
 gunicorn==21.2.0
 setuptools==68.2.2
+h5py==3.10.0
