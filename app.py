@@ -22,7 +22,7 @@ from calculations_dash import ecbc_conversion
 # Set working directory
 # os.chdir(r"C:\Users\marta\Documents\GitHub\EC_BC_conversion")
 app = dash.Dash(__name__)
-server = app.server  # <--- ADD THIS LINE for Gunicorn
+server = app.server  # THIS MUST BE PRESENT
 # ------------------------
 # Helper functions
 # ------------------------
@@ -39,7 +39,6 @@ def safe_val(x):
 # ------------------------
 # Dash app
 # ------------------------
-app = dash.Dash(__name__)
 
 app.layout = html.Div([
 
@@ -215,4 +214,3 @@ def download_csv(n_clicks, table_data):
 # ------------------------
 if __name__ == "__main__":
     app.run(debug=False)
-
