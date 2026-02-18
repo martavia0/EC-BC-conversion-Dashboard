@@ -61,21 +61,21 @@ app.layout = html.Div([
         id="protocol",
         options=[{"label": "EUSAAR", "value": 0},
                  {"label": "NIOSH", "value": 1},
-                 {"label": "Not applicable (eBC data)", "value": 0}],
+                 {"label": "Not applicable (eBC data)", "value": 2}],
         placeholder="Protocol"
     ),
     dcc.Dropdown(
         id="instrEC",
         options=[{"label": "High-Volume filters", "value": 0},
                  {"label": "Low-Volume Filters", "value": 1},
-                 {"label": "Not applicable (eBC data)", "value": 0}],
+                 {"label": "Not applicable (eBC data)", "value": 2}],
         placeholder="EC instrument"
     ),
     dcc.Dropdown(
         id="instrBC",
         options=[{"label": "AE33", "value": 0},
                  {"label": "MAAP", "value": 1},
-                 {"label": "Not applicable (EC data)", "value": 0}],
+                 {"label": "Not applicable (EC data)", "value": 2}],
         placeholder="BC instrument"
     ),
     dcc.Dropdown(
@@ -135,7 +135,13 @@ def run_conversion(contents, ec_bc, prot, instrEC, instrBC, sizecut):
     instrEC = safe_val(instrEC)
     instrBC = safe_val(instrBC)
     sizecut = safe_val(sizecut)
-
+    
+    na_to_zero = lambda x: 0 if x == 2 else x
+    
+    prot = na_to_zero(prot)
+    instrEC = na_to_zero(instrEC)
+    instrBC = na_to_zero(instrBC)
+    
     # Parse CSV
     df = parse_csv(contents)
     n = len(df)
