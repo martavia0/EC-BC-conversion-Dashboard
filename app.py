@@ -61,21 +61,21 @@ app.layout = html.Div([
         id="protocol",
         options=[{"label": "EUSAAR", "value": 0},
                  {"label": "NIOSH", "value": 1},
-                 {"label": "Not applicable (eBC data)", "value": 2}],
+                 {"label": "Not applicable (eBC data)", "value": 0}],
         placeholder="Protocol"
     ),
     dcc.Dropdown(
         id="instrEC",
         options=[{"label": "High-Volume filters", "value": 0},
                  {"label": "Low-Volume Filters", "value": 1},
-                 {"label": "Not applicable (eBC data)", "value": 2}],
+                 {"label": "Not applicable (eBC data)", "value": 0}],
         placeholder="EC instrument"
     ),
     dcc.Dropdown(
         id="instrBC",
         options=[{"label": "AE33", "value": 0},
                  {"label": "MAAP", "value": 1},
-                 {"label": "Not applicable (EC data)", "value": 2}],
+                 {"label": "Not applicable (EC data)", "value": 0}],
         placeholder="BC instrument"
     ),
     dcc.Dropdown(
