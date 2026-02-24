@@ -44,7 +44,7 @@ app.layout = html.Div([
 
     html.H1("EC–BC Canonisation"),
     
-    html.P("1. Upload your values.  2. Introduce your measurements metadata.  3. Export converted values."}),
+    html.P("1. Upload your values.  2. Select your measurements metadata (dropdown tabs).  3. Export converted values."}),
            # style={'marginBottom': '20px', 'fontSize': '16px', 'color': '#555'}),
     
     dcc.Upload(
