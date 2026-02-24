@@ -17,7 +17,7 @@ import os
 import base64
 import io
 import plotly.graph_objects as go
-os.chdir(r"C:\Users\marta\Documents\GitHub\EC_BC_conversion")
+# os.chdir(r"C:\Users\marta\Documents\GitHub\Dashboard\EC-BC-conversion-Dashboard")
 from calculations_dash import ecbc_conversion
 
 # Set working directory

@@ -54,18 +54,18 @@ def ecbc_conversion(orig, datetime, ec_bc, prot, instrEC, instrBC, scec1, scec10
     conv_df['converted_EC_BC'] = np.median(converted, axis=1)
  
     return converted, conv_df
-#%%
-orig=[1.2, 1.3, 1.25]
-dates = ["01/01/2020", "02/01/2020", "02/01/2020"]
-ec_bc =  np.full(len(orig),1)
-protocol = np.full(len(orig),1)
-instr_ec = np.full(len(orig),0)
-instr_bc =  np.full(len(orig),0)
-scec1= np.full(len(orig),1)
-scec10= np.full(len(orig),0)
-scbc10= np.full(len(orig),0)
-scbctsp=  np.full(len(orig),0)
+# #%%
+# orig=[1.2, 1.3, 1.25]
+# dates = ["01/01/2020", "02/01/2020", "02/01/2020"]
+# ec_bc =  np.full(len(orig),1)
+# protocol = np.full(len(orig),1)
+# instr_ec = np.full(len(orig),0)
+# instr_bc =  np.full(len(orig),0)
+# scec1= np.full(len(orig),1)
+# scec10= np.full(len(orig),0)
+# scbc10= np.full(len(orig),0)
+# scbctsp=  np.full(len(orig),0)
 
-a,b = ecbc_conversion(orig, dates, ec_bc, protocol, instr_ec, instr_bc, scec1, scec10, scbc10, scbctsp)
+# a,b = ecbc_conversion(orig, dates, ec_bc, protocol, instr_ec, instr_bc, scec1, scec10, scbc10, scbctsp)
 
 
