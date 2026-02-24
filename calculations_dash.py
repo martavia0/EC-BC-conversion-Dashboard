@@ -37,6 +37,8 @@ def ecbc_conversion(orig, datetime, ec_bc, prot, instrEC, instrBC, scec1, scec10
 
     binary_matrix = np.array([ec_bc, prot, instrEC, instrBC, scec1, scec10, scbc10, scbct]).T
     log_orig = np.log10(orig)
+    mlr_matrix = mlr_matrix.copy()  # Add this line before modifying
+
     mlr_matrix[0, :] *= -1   # des-invert ONLY first column (The slope is to be applied to BC, )
     # print("Dim binary matrix: ", binary_matrix.shape)
     # print("Dim MLR_matrix: ", mlr_matrix.shape)

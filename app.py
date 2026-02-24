@@ -17,10 +17,10 @@ import os
 import base64
 import io
 import plotly.graph_objects as go
+os.chdir(r"C:\Users\marta\Documents\GitHub\EC_BC_conversion")
 from calculations_dash import ecbc_conversion
 
 # Set working directory
-# os.chdir(r"C:\Users\marta\Documents\GitHub\EC_BC_conversion")
 app = dash.Dash(__name__)
 server = app.server  # THIS MUST BE PRESENT
 # ------------------------
