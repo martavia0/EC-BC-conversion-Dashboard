@@ -85,8 +85,7 @@ app.layout = html.Div([
         id="sizecut",
         options=[{"label": "PM1", "value": 2},
                  {"label": "PM2.5", "value": 0},
-                 {"label": "PM10", "value": 3},
-                 {"label": "PM TSP", "value": 4}],
+                 {"label": "PM10", "value": 3}],
         placeholder="Size cut"
     ),
 
@@ -153,7 +152,6 @@ def run_conversion(contents, ec_bc, prot, instrEC, instrBC, sizecut):
     scec1 = np.full(n, int(sizecut == 2))
     scec10 = np.full(n, int(sizecut == 3))
     scbc10 = np.full(n, int(sizecut == 3))
-    scbct = np.full(n, int(sizecut == 4))
 
     # Run conversion
     converted, conv_df = ecbc_conversion(
@@ -166,7 +164,6 @@ def run_conversion(contents, ec_bc, prot, instrEC, instrBC, sizecut):
         scec1=scec1,
         scec10=scec10,
         scbc10=scbc10,
-        scbct=scbct
     )
 
     # Compute 5th/95th percentiles for uncertainty
