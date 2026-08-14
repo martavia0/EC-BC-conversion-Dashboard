@@ -14,7 +14,7 @@ def ecbc_conversion(orig, datetime, ec_bc, prot, instrEC, instrBC, scec1, scec10
     orig = np.asarray(orig, dtype=float)
     datetime = np.asarray(datetime)
     #The file is from the 10th of Dec.h5
-    with h5py.File(r"idata_EC_BC_model6.h5", 'r') as f:
+    with h5py.File(r"idata_EC_BC_model6_slim.h5", 'r') as f:
         print(list(f.keys()), f['posterior']['slope'])       
         slope = np.array(f['posterior']['slope']).mean(axis=0)
         protocol = np.array(f['posterior']['protocol']).mean(axis=0)
